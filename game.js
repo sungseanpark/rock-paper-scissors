@@ -167,6 +167,24 @@ function playRoundEvent(e) {
     playRound(e.target.textContent, getComputerChoice());
 }
 
+function startGame() {
+
+    playerScore = 0;
+    computerScore = 0;
+
+    const playerScoreDiv = document.querySelector('.score-player');
+    playerScoreDiv.textContent = 'Player: ' + playerScore;
+    const computerScoreDiv = document.querySelector('.score-computer');
+    computerScoreDiv.textContent = 'Computer: ' + computerScore;
+    const result = document.querySelector('.round-result');
+    result.textContent = '';
+
+    buttons.forEach(button => {
+        button.addEventListener('click', playRoundEvent);
+    });
+
+}
+
 /*game();*/
 const buttons = document.querySelectorAll('button');
 
