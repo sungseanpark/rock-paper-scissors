@@ -17,17 +17,21 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let playerSelectionLowerCase = playerSelection.toLowerCase();
+    const result = document.querySelector('.round-result');
     switch(playerSelectionLowerCase) {
         case "rock":
             switch(computerSelection) {
                 case "rock":
                     console.log("You Tie! Rock Ties Rock");
+                    result.textContent = "You Tie! Rock Ties Rock";
                     return "tie";
                 case "paper":
                     console.log("You Lose! Paper Beats Rock");
+                    result.textContent = "You Lose! Paper Beats Rock";
                     return "computer";
                 case "scissors":
                     console.log("You Win! Rock Beats Scissors");
+                    result.textContent = "You Win! Rock Beats Scissors";
                     return "player";
             }
             break;
@@ -35,12 +39,15 @@ function playRound(playerSelection, computerSelection) {
             switch(computerSelection){
                 case "rock":
                     console.log("You Win! Paper Beats Rock");
+                    result.textContent = "You Win! Paper Beats Rock";
                     return "player";
                 case "paper":
                     console.log("You Tie! Paper Ties Paper");
+                    result.textContent = "You Tie! Paper Ties Paper";
                     return "tie";
                 case "scissors":
                     console.log("You Lose! Scissors Beats Paper");
+                    result.textContent = "You Lose! Scissors Beats Paper";
                     return "computer";
             }
             break;
@@ -48,12 +55,15 @@ function playRound(playerSelection, computerSelection) {
             switch(computerSelection){
                 case "rock":
                     console.log("You Lose! Rock Beats Scissors");
+                    result.textContent = "You Lose! Rock Beats Scissors";
                     return "computer";
                 case "paper":
                     console.log("You Win! Scissors Beats Paper");
+                    result.textContent = "You Win! Scissors Beats Paper";
                     return "player";
                 case "scissors":
                     console.log("You Tie! Scissors Ties Scissors");
+                    result.textContent = "You Tie! Scissors Ties Scissors";
                     return "tie";
             }
             break;
@@ -91,4 +101,18 @@ function game() {
     }
 }
 
-game();
+/*game();*/
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', e => {
+        playRound(e.target.textContent, getComputerChoice());
+    });
+});
+
+let playerScore = 0;
+let computerScore= 0;
+
+
+
+
