@@ -161,10 +161,19 @@ function endGame(winner) {
     buttons.forEach(button => {
         button.removeEventListener('click', playRoundEvent);
     });
+
+    const container =  document.querySelector('.container');
+    const playAgainButton = document.createElement('button');
+    playAgainButton.classList.add('play-again');
+    playAgainButton.textContent = 'Play Again!';
+
+    container.appendChild(playAgainButton);
+
+    playAgainButton.addEventListener('click', startGame);
 }
 
 function playRoundEvent(e) {
-    playRound(e.target.textContent, getComputerChoice());
+    playRound(e.target.id, getComputerChoice());
 }
 
 function startGame() {
@@ -178,6 +187,10 @@ function startGame() {
     computerScoreDiv.textContent = 'Computer: ' + computerScore;
     const result = document.querySelector('.round-result');
     result.textContent = '';
+
+    const playAgainButton = document.querySelector('.play-again');
+    const container = document.querySelector('.container');
+    container.removeChild(playAgainButton);
 
     buttons.forEach(button => {
         button.addEventListener('click', playRoundEvent);
