@@ -1,9 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/atari');
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0px;
     align-items: center;
-    min-height: 100vh;  
+    min-height: 100vh;
+    font-family: Roboto, sans-serif;  
+}
+
+.header {
+    background-color: #1F2937;
+    align-self: stretch;
+    text-align: center;
+    padding: 24px 0;
+    font-family: 'Atari', sans-serif;
+    font-size: 48px;
+    color: #ffdc5d;
 }
 
 .scores-container {
