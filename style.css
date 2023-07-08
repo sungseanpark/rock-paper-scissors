@@ -28,6 +28,10 @@ body {
 
 .selection {
     font-size: 48px;
+    padding: 16px;
+    background-color: #666666;
+    border: none;
+    border-radius: 4px;
 }
 
 .scores-container {
@@ -75,4 +79,30 @@ button {
 
 button:hover {
     background-color: #777777;
-  }
+}
+
+#computer-choice {
+    font-size: 48px;
+    padding: 16px;
+    background-color: #666666;
+    border: none;
+    border-radius: 4px;
+    perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#computer-choice:hover .card{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}

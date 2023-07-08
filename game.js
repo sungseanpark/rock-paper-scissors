@@ -173,7 +173,22 @@ function endGame(winner) {
 }
 
 function playRoundEvent(e) {
-    playRound(e.target.id, getComputerChoice());
+    const computerChoice = getComputerChoice();
+    let computerChoiceEmoji;
+    switch(computerChoice) {
+        case 'rock':
+            computerChoiceEmoji= '👊';
+            break;
+        case 'paper':
+            computerChoiceEmoji = '🤚';
+            break;
+        case 'scissors':
+            computerChoiceEmoji = '✌️';
+            break;
+    }
+    const computerChoiceDiv = document.querySelector('#computer-choice');
+    computerChoiceDiv.textContent = computerChoiceEmoji;
+    playRound(e.target.id, computerChoice);
 }
 
 function startGame() {
