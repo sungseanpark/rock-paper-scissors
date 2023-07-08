@@ -207,6 +207,9 @@ function startGame() {
     const container = document.querySelector('body');
     container.removeChild(playAgainButton);
 
+    const computerChoiceDiv = document.querySelector('#computer-choice');
+    computerChoiceDiv.textContent = '❓';
+
     buttons.forEach(button => {
         button.addEventListener('click', playRoundEvent);
     });
