@@ -6,7 +6,9 @@ body {
     margin: 0px;
     align-items: center;
     min-height: 100vh;
-    font-family: Roboto, sans-serif;  
+    font-family: 'Atari', sans-serif;
+    background-color: #36454F;  
+    color: #ffdc5d;
 }
 
 .header {
@@ -19,7 +21,45 @@ body {
     color: #ffdc5d;
 }
 
+.robot-emoji {
+    padding: 24px 0 ;
+    font-size: 48px;
+}
+
+.selection {
+    font-size: 48px;
+}
+
 .scores-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-self: stretch;
+    color: #ffdc5d;
+    padding: 48px 0;
+    font-size: 24px;
+    gap: 100px;
+}
+
+button.selection {
+    padding: 16px;
+    background-color: #1F2937;
+}
+
+.selection-container {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    gap: 24px;
+}
+
+.round-result {
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+.play-again {
+    padding: 16px;
+    color: #ffdc5d;
+    font-family: 'Atari', sans-serif;
+    background-color: #1F2937;
 }

@@ -162,7 +162,7 @@ function endGame(winner) {
         button.removeEventListener('click', playRoundEvent);
     });
 
-    const container =  document.querySelector('.container');
+    const container =  document.querySelector('body');
     const playAgainButton = document.createElement('button');
     playAgainButton.classList.add('play-again');
     playAgainButton.textContent = 'Play Again!';
@@ -189,7 +189,7 @@ function startGame() {
     result.textContent = '';
 
     const playAgainButton = document.querySelector('.play-again');
-    const container = document.querySelector('.container');
+    const container = document.querySelector('body');
     container.removeChild(playAgainButton);
 
     buttons.forEach(button => {
