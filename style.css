@@ -106,3 +106,7 @@ button:hover {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
